@@ -1,5 +1,5 @@
 {
-    "label": "PDF Generator",
+    "label": "PDF Generator TEST",
     "name": "pdf-generatorTEST",
     "apiVersion": "v1",
     "internal": false,
@@ -31,7 +31,7 @@
         "allowMultipleInstances": true
     },
     "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/pdf-generator.png",
-    "configurationHelpUrl": "/endpoints_pdfgenerator.html",
+    "configurationHelpUrl": "/endpoints_pdfgenerator2.html",
     "status": "ACTIVE",
     "stores": [],
     "events": [
