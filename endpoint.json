@@ -126,7 +126,8 @@
         "functions.js"
     ],
     "flowSteps": [
-        "serviceCallPdfGenerator"
+        "seviceCallPdfGenerator",
+        "generatePDFPdfGenerator"
     ],
     "listeners":[],
     "configuration":[
