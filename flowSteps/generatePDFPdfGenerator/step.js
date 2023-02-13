@@ -9,6 +9,6 @@
  * {text} callbacks, This is used to send callbacks.
  */
 step.generatePDFPdfGenerator = function (inputs) {
-	sys.logs.error(inputs)
+	sys.logs.error(JSON.stringify(inputs))
 	return {};
 };
