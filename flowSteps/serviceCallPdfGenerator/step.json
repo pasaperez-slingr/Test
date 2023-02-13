@@ -12,39 +12,39 @@
         "possibleValues": [
           {
             "label": "Generate Pdf ({template}, {data}, {settings})",
-            "name": "app.endpoints.pdf-generator.generatePdf(template, data, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.generatePdf(template, data, settings, callbackData, callbacks)"
           },
           {
             "label": "Merge Documents ({documents})",
-            "name": "app.endpoints.pdf-generator.mergeDocuments(documents, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.mergeDocuments(documents, callbackData, callbacks)"
           },
           {
             "label": "Split Document ({fileId}, {interval})",
-            "name": "app.endpoints.pdf-generator.splitDocument(fileId, interval, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.splitDocument(fileId, interval, callbackData, callbacks)"
           },
           {
             "label": "Replace Header And Footer ({fileId}, {settings})",
-            "name": "app.endpoints.pdf-generator.replaceHeaderAndFooter(fileId, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.replaceHeaderAndFooter(fileId, settings, callbackData, callbacks)"
           },
           {
             "label": "Fill Form ({fileId}, {settings})",
-            "name": "app.endpoints.pdf-generator.fillForm(fileId, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.fillForm(fileId, settings, callbackData, callbacks)"
           },
           {
             "label": "Fill Form Sync ({fileId}, {settings})",
-            "name": "app.endpoints.pdf-generator.fillFormSync(fileId, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.fillFormSync(fileId, settings, callbackData, callbacks)"
           },
           {
             "label": "Replace Images ({fileId}, {settings})",
-            "name": "app.endpoints.pdf-generator.replaceImages(fileId, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.replaceImages(fileId, settings, callbackData, callbacks)"
           },
           {
             "label": "Add Images ({fileId}, {settings})",
-            "name": "app.endpoints.pdf-generator.addImages(fileId, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.addImages(fileId, settings, callbackData, callbacks)"
           },
           {
             "label": "Convert Pdf To Images ({fileIds}, {dpi}, {settings})",
-            "name": "app.endpoints.pdf-generator.convertPdfToImages(fileIds, dpi, settings, callbackData, callbacks)"
+            "name": "app.endpoints.pdf-generator2.convertPdfToImages(fileIds, dpi, settings, callbackData, callbacks)"
           }
         ]
       }
