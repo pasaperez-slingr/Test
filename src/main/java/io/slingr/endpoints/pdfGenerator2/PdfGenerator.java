@@ -10,7 +10,6 @@ import io.slingr.endpoints.framework.annotations.ApplicationLogger;
 import io.slingr.endpoints.framework.annotations.EndpointFunction;
 import io.slingr.endpoints.framework.annotations.EndpointProperty;
 import io.slingr.endpoints.framework.annotations.SlingrEndpoint;
-import io.slingr.endpoints.pdfGenerator.workers.*;
 import io.slingr.endpoints.pdfGenerator2.workers.*;
 import io.slingr.endpoints.services.AppLogs;
 import io.slingr.endpoints.services.rest.DownloadedFile;
