@@ -36,7 +36,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>
  * <p>Created by hpacini on 24/10/17.
  */
-@SlingrEndpoint(name = "pdf-generator", functionPrefix = "_")
+@SlingrEndpoint(name = "pdf-generator2", functionPrefix = "_")
 public class PdfGenerator extends Endpoint {
 
     private Logger logger = LoggerFactory.getLogger(PdfGenerator.class);
