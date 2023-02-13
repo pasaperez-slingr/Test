@@ -1,7 +1,7 @@
-package io.slingr.endpoints.pdfGenerator.workers;
+package io.slingr.endpoints.pdfGenerator2.workers;
 
-import io.slingr.endpoints.pdfGenerator.PdfFilesUtils;
-import io.slingr.endpoints.pdfGenerator.PdfFillForm;
+import io.slingr.endpoints.pdfGenerator2.PdfFilesUtils;
+import io.slingr.endpoints.pdfGenerator2.PdfFillForm;
 import io.slingr.endpoints.services.AppLogs;
 import io.slingr.endpoints.services.Events;
 import io.slingr.endpoints.services.Files;

@@ -1,4 +1,4 @@
-package io.slingr.endpoints.pdfGenerator.workers;
+package io.slingr.endpoints.pdfGenerator2.workers;
 
 import io.slingr.endpoints.exceptions.EndpointException;
 import io.slingr.endpoints.exceptions.ErrorCode;

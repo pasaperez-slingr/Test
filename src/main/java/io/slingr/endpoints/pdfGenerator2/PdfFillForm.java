@@ -1,4 +1,4 @@
-package io.slingr.endpoints.pdfGenerator;
+package io.slingr.endpoints.pdfGenerator2;
 
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfFormField;

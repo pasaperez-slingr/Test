@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.slingr.endpoints</groupId>
-    <artifactId>pdf-generator</artifactId>
+    <artifactId>pdf-generator2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>SLINGR - PDF Generator Endpoint</name>
+    <name>SLINGR - PDF Generator Endpoint 2</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -35,7 +35,7 @@
         <project.build.s3-wagon.version>3.3</project.build.s3-wagon.version>
         <project.build.shade.version>2.4.1</project.build.shade.version>
         <!-- Other properties -->
-        <build.main-class>io.slingr.endpoints.pdfGenerator.Runner</build.main-class>
+        <build.main-class>io.slingr.endpoints.pdfGenerator2.Runner</build.main-class>
     </properties>
 
     <dependencies>
