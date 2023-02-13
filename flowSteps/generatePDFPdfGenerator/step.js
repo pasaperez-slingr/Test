@@ -10,19 +10,5 @@
  */
 step.generatePDFPdfGenerator = function (inputs) {
 	sys.logs.error(inputs)
-
-	var inputs = {
-		template: inputs.template,
-		data: inputs.data,
-		settings: inputs.settings,
-		callbackData: inputs.callbackData || "",
-		callbacks: inputs.callbacks || "",
-	};
-	inputs.callbacks = inputs.callbacks ?
-		eval("inputs.callbacks = {" + inputs.events + " : function(event, callbackData) {" + inputs.callbacks + "}}") :
-		inputs.callbacks;
-	sys.logs.error(inputs)
-
-	inputs.callbackData = inputs.callbackData ? {record: inputs.callbackData} : inputs.callbackData;
-	return app.endpoints.pdfGenerator2.generatePdf(inputs.template, inputs.data, inputs.settings, inputs.callbackData, inputs.callbacks);
+	return {};
 };
