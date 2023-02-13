@@ -219,7 +219,7 @@ public class PdfHeaderFooterHandler {
         InputStream is = openStream(commandParams, targetTmpFile);
 
         try {
-            java.lang.Thread.sleep(1000);
+            Thread.sleep(1000);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

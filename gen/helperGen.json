@@ -1,6 +1,6 @@
 {
   "fileName": "functions",
-  "endpointName": "pdf-generatorTEST",
+  "endpointName": "pdf-generator",
   "apiDescriptors": [
     {
       "prefix": "",
