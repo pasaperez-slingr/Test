@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.slingr.endpoints</groupId>
-    <artifactId>pdf-generator2</artifactId>
+    <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>SLINGR - PDF Generator Endpoint 2</name>
+    <name>SLINGR - Test</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -35,7 +35,7 @@
         <project.build.s3-wagon.version>3.3</project.build.s3-wagon.version>
         <project.build.shade.version>2.4.1</project.build.shade.version>
         <!-- Other properties -->
-        <build.main-class>io.slingr.endpoints.pdfGenerator2.Runner</build.main-class>
+        <build.main-class>io.slingr.endpoints.test.Runner</build.main-class>
     </properties>
 
     <dependencies>
@@ -44,39 +44,6 @@
             <groupId>io.slingr.endpoints</groupId>
             <artifactId>slingr-endpoints</artifactId>
             <version>${slingr.slingr-endpoints.version}</version>
-        </dependency>
-        <!-- PDF libraries -->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.20</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox</artifactId>
-            <version>2.0.15</version>
-        </dependency>
-
-        <!-- add all iText 7 Community modules -->
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itext7-core</artifactId>
-            <version>7.1.9</version>
-            <type>pom</type>
-        </dependency>
-
-        <!-- Testing Modules -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
