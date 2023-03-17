@@ -21,7 +21,9 @@
     "events": [ ],
     "functions": [ ],
     "scripts":[ ],
-    "flowSteps": [ ],
+    "flowSteps": [
+        "roto"
+    ],
     "listeners":[ ],
     "configuration":[ ]
 }
