@@ -9,9 +9,8 @@
             {
                 "name": "default",
                 "label": "Default",
-                "memory": 384,
-                "offHeapMinFactor": 1.5,
-                "description": "388 of memory and 1.5 off heap min factor. Default configuration"
+                "memory": 256,
+                "description": "Default configuration"
             }
         ],
         "allowMultipleInstances": false
@@ -77,9 +76,12 @@
             "description": "Sends a OPTIONS request"
         }
     ],
-    "scripts":[],
-    "flowSteps": [],
-    "listeners":[],
+    "scripts":[
+        "functions.js"
+    ],
+    "flowSteps":  [
+        "httpCall"
+    ],
     "configuration":[
         {
             "name": "baseUrl",

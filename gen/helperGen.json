@@ -1,0 +1,12 @@
+{
+  "fileName": "functions",
+  "endpointName": "test",
+  "apiDescriptors": [
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/sync"
+    }
+  ]
+}
