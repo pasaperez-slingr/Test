@@ -6,7 +6,7 @@
     <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>SLINGR - Test</name>
+    <name>SLINGR - Test Endpoint</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -16,7 +16,7 @@
         <log4j.version>2.8.2</log4j.version>
         <logentries.version>1.1.11</logentries.version>
         <jackson.version>2.8.0</jackson.version>
-        <jersey.version>2.22.1</jersey.version>
+        <jersey.version>2.39</jersey.version>
         <jericho-html.version>3.4</jericho-html.version>
         <httpclient.version>4.5.3</httpclient.version>
         <commons-io.version>2.5</commons-io.version>
@@ -39,11 +39,25 @@
     </properties>
 
     <dependencies>
-        <!-- SLINGR Modules -->
+        <!-- SLINGR Endpoints Framework -->
         <dependency>
             <groupId>io.slingr.endpoints</groupId>
             <artifactId>slingr-endpoints</artifactId>
             <version>${slingr.slingr-endpoints.version}</version>
+        </dependency>
+
+        <!-- Testing Modules -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -75,10 +89,6 @@
                 <enabled>true</enabled>
                 <checksumPolicy>warn</checksumPolicy>
             </snapshots>
-        </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
