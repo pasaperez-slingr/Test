@@ -1,4 +1,4 @@
-package io.slingr.endpoints.test;
+package io.slingr.endpoints.api;
 
 import io.slingr.endpoints.HttpEndpoint;
 import io.slingr.endpoints.framework.annotations.ApplicationLogger;
@@ -7,10 +7,10 @@ import io.slingr.endpoints.services.AppLogs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SlingrEndpoint(name = "test")
-public class Test extends HttpEndpoint {
+@SlingrEndpoint(name = "api")
+public class Api extends HttpEndpoint {
 
-    private Logger logger = LoggerFactory.getLogger(Test.class);
+    private Logger logger = LoggerFactory.getLogger(Api.class);
 
     @ApplicationLogger
     protected AppLogs appLogger;

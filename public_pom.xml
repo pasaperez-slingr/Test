@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.slingr.endpoints</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>SLINGR - Test</name>
+    <name>SLINGR - Api</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -35,7 +35,7 @@
         <project.build.s3-wagon.version>3.3</project.build.s3-wagon.version>
         <project.build.shade.version>2.4.1</project.build.shade.version>
         <!-- Other properties -->
-        <build.main-class>io.slingr.endpoints.test.Runner</build.main-class>
+        <build.main-class>io.slingr.endpoints.api.Runner</build.main-class>
     </properties>
 
     <dependencies>
