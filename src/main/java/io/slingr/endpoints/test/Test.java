@@ -7,7 +7,7 @@ import io.slingr.endpoints.services.AppLogs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SlingrEndpoint(name = "test")
+@SlingrEndpoint(name = "test", functionPrefix = "_")
 public class Test extends HttpEndpoint {
 
     private Logger logger = LoggerFactory.getLogger(Test.class);
