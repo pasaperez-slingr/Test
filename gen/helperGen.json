@@ -1,0 +1,600 @@
+{
+  "fileName": "functions",
+  "apiDescriptors": [
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/asm/suppressions"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/asm/suppressions/global"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/asm/groups"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/webhooks/parse/settings"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/webhooks/parse/stats"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/webhooks/event/test"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/webhooks/event/settings"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/settings/enforced_tls"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/scheduled_sends"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/profile"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/email"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/password"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/username"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/credits"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/user/account"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/domains"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/domains/subuser"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/domains/default"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/links"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/links/default"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/links/subuser"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/whitelabel/ips"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/recipients"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/recipients/count"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/recipients/search"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/recipients/billable_count"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/lists"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/custom_fields"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/segments"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/reserved_fields"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/contactdb/status"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/ips"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/ips/pools"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/ips/warmup"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/ips/remaining"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/ips/assigned"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/suppression/blocks"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/suppression/bounces"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/suppression/invalid_emails"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/suppression/spam_reports"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/suppression/unsubscribes"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/scopes"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/scopes/requests"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/contacts"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/contacts/exports"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/contacts/imports"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/contacts/count"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/contacts/search"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/segments"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/singlesends"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/lists"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/senders"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/marketing/field_definitions"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/plain_content"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/template"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/forward_spam"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/forward_bounce"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/footer"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/address_whitelist"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/spam_check"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/bounce_purge"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail_settings/bcc"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/teammates"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/teammates/pending"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/tracking_settings"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/tracking_settings/click"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/tracking_settings/subscription"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/tracking_settings/google_analytics"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/tracking_settings/open"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/categories/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/categories/stats/sums"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/categories"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/access_settings/activity"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/access_settings/whitelist"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/subusers/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/subusers/stats/monthly"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/subusers/stats/sums"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/subusers"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/subusers/reputations"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/messages"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/messages/download"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail/batch"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mail/send"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/partner_settings"
+    },
+    {
+      "method": "PATCH",
+      "prefix": "",
+      "suffix": "",
+      "url": "/partner_settings/new_relic"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/browsers/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/devices/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/templates"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/campaigns"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/alerts"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/api_keys"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/clients/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/geo/stats"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/mailbox_providers/stats"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/senders"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/v3/whitelabel/dns/email"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/validations/email"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/stats"
+    }
+  ],
+  "endpointName": "sendgrid"
+}

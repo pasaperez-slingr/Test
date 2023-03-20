@@ -1,0 +1,449 @@
+{
+  "label": "API call to sendgrid",
+  "name": "apiCallSendgrid",
+  "category": "integrations",
+  "description": "This flow step will send generic request to sendgrid",
+  "inputs": [
+    {
+      "label": "Url",
+      "name": "url",
+      "description": "The method and path to which this endpoint is to send requests in a generic way.",
+      "type": "urlParams",
+      "required": "true",
+      "options": {
+        "type": "dropDown",
+        "possibleValues": [
+            {
+              "label": "GET /asm/suppressions"
+            },
+            {
+              "label": "GET /asm/groups"
+            },
+            {
+              "label": "GET /user/webhooks/parse/settings"
+            },
+            {
+              "label": "GET /user/webhooks/parse/stats"
+            },
+            {
+              "label": "GET /user/webhooks/event/settings"
+            },
+            {
+              "label": "GET /user/profile"
+            },
+            {
+              "label": "GET /user/email"
+            },
+            {
+              "label": "GET /user/username"
+            },
+            {
+              "label": "GET /user/credits"
+            },
+            {
+              "label": "GET /user/account"
+            },
+            {
+              "label": "GET /whitelabel/domains"
+            },
+            {
+              "label": "GET /whitelabel/domains/subuser"
+            },
+            {
+              "label": "GET /whitelabel/domains/default"
+            },
+            {
+              "label": "GET /whitelabel/links"
+            },
+            {
+              "label": "GET /whitelabel/links/default"
+            },
+            {
+              "label": "GET /contactdb/recipients/count"
+            },
+            {
+              "label": "GET /contactdb/recipients/billable_count"
+            },
+            {
+              "label": "GET /contactdb/lists"
+            },
+            {
+              "label": "GET /contactdb/segments"
+            },
+            {
+              "label": "GET /contactdb/reserved_fields"
+            },
+            {
+              "label": "GET /contactdb/status"
+            },
+            {
+              "label": "GET /ips/pools"
+            },
+            {
+              "label": "GET /ips/remaining"
+            },
+            {
+              "label": "GET /ips/assigned"
+            },
+            {
+              "label": "GET /suppression/blocks"
+            },
+            {
+              "label": "GET /suppression/spam_reports"
+            },
+            {
+              "label": "GET /suppression/unsubscribes"
+            },
+            {
+              "label": "GET /scopes"
+            },
+            {
+              "label": "GET /scopes/requests"
+            },
+            {
+              "label": "GET /marketing/contacts"
+            },
+            {
+              "label": "GET /marketing/contacts/count"
+            },
+            {
+              "label": "GET /marketing/lists"
+            },
+            {
+              "label": "GET /marketing/senders"
+            },
+            {
+              "label": "GET /marketing/field_definitions"
+            },
+            {
+              "label": "GET /mail_settings"
+            },
+            {
+              "label": "GET /mail_settings/plain_content"
+            },
+            {
+              "label": "GET /mail_settings/template"
+            },
+            {
+              "label": "GET /mail_settings/forward_spam"
+            },
+            {
+              "label": "GET /mail_settings/address_whitelist"
+            },
+            {
+              "label": "GET /mail_settings/bcc"
+            },
+            {
+              "label": "GET /teammates"
+            },
+            {
+              "label": "GET /teammates/pending"
+            },
+            {
+              "label": "GET /tracking_settings"
+            },
+            {
+              "label": "GET /tracking_settings/click"
+            },
+            {
+              "label": "GET /tracking_settings/subscription"
+            },
+            {
+              "label": "GET /categories/stats"
+            },
+            {
+              "label": "GET /categories/stats/sums"
+            },
+            {
+              "label": "GET /categories"
+            },
+            {
+              "label": "GET /access_settings/activity"
+            },
+            {
+              "label": "GET /subusers/stats"
+            },
+            {
+              "label": "GET /subusers/stats/monthly"
+            },
+            {
+              "label": "GET /subusers/stats/sums"
+            },
+            {
+              "label": "GET /subusers/reputations"
+            },
+            {
+              "label": "GET /messages"
+            },
+            {
+              "label": "GET /partner_settings"
+            },
+            {
+              "label": "GET /browsers/stats"
+            },
+            {
+              "label": "GET /devices/stats"
+            },
+            {
+              "label": "GET /templates"
+            },
+            {
+              "label": "GET /clients/stats"
+            },
+            {
+              "label": "GET /geo/stats"
+            },
+            {
+              "label": "GET /mailbox_providers/stats"
+            },
+            {
+              "label": "GET /stats"
+            },
+            {
+              "label": "POST /asm/suppressions/global"
+            },
+            {
+              "label": "POST /user/webhooks/event/test"
+            },
+            {
+              "label": "POST /user/scheduled_sends"
+            },
+            {
+              "label": "POST /whitelabel/ips"
+            },
+            {
+              "label": "POST /contactdb/recipients/search"
+            },
+            {
+              "label": "POST /contactdb/custom_fields"
+            },
+            {
+              "label": "POST /ips"
+            },
+            {
+              "label": "POST /ips/warmup"
+            },
+            {
+              "label": "POST /marketing/contacts/exports"
+            },
+            {
+              "label": "POST /marketing/contacts/search"
+            },
+            {
+              "label": "POST /marketing/segments"
+            },
+            {
+              "label": "POST /marketing/singlesends"
+            },
+            {
+              "label": "POST /subusers"
+            },
+            {
+              "label": "POST /messages/download"
+            },
+            {
+              "label": "POST /mail/batch"
+            },
+            {
+              "label": "POST /mail/send"
+            },
+            {
+              "label": "POST /campaigns"
+            },
+            {
+              "label": "POST /alerts"
+            },
+            {
+              "label": "POST /api_keys"
+            },
+            {
+              "label": "POST /senders"
+            },
+            {
+              "label": "POST /v3/whitelabel/dns/email"
+            },
+            {
+              "label": "POST /validations/email"
+            },
+            {
+              "label": "PATCH /user/settings/enforced_tls"
+            },
+            {
+              "label": "PATCH /contactdb/recipients"
+            },
+            {
+              "label": "PATCH /mail_settings/forward_bounce"
+            },
+            {
+              "label": "PATCH /mail_settings/footer"
+            },
+            {
+              "label": "PATCH /mail_settings/spam_check"
+            },
+            {
+              "label": "PATCH /mail_settings/bounce_purge"
+            },
+            {
+              "label": "PATCH /tracking_settings/google_analytics"
+            },
+            {
+              "label": "PATCH /tracking_settings/open"
+            },
+            {
+              "label": "PATCH /partner_settings/new_relic"
+            },
+            {
+              "label": "PUT /user/password"
+            },
+            {
+              "label": "PUT /marketing/contacts/imports"
+            },
+            {
+              "label": "DELETE /whitelabel/links/subuser"
+            },
+            {
+              "label": "DELETE /suppression/bounces"
+            },
+            {
+              "label": "DELETE /suppression/invalid_emails"
+            },
+            {
+              "label": "DELETE /access_settings/whitelist"
+            }
+        ]
+      }
+    },
+    {
+      "label": "Headers",
+      "name": "headers",
+      "description": "Let the client and the server pass additional information with the HTTP request in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Query Params",
+      "name": "params",
+      "description": "Parameters attached to the end of a url in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Body",
+      "name": "body",
+      "type": "json",
+      "description": "Content to be sent to the server.",
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "events",
+      "type": "dropDown",
+      "description": "Select event",
+      "multiplicity": "one",
+      "options": {
+        "possibleValues": [
+          {
+            "label": "File Downloaded",
+            "name": "fileDownloaded"
+          }
+        ],
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Override Settings",
+      "name": "overrideSettings",
+      "type": "boolean",
+      "description": "If true, allows adding configurations",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Follow Redirects",
+      "name": "followRedirects",
+      "type": "boolean",
+      "description": "Follow the redirects when a HTTP request is executed",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Download",
+      "name": "download",
+      "type": "boolean",
+      "description": "Indicates that the resource has to be downloaded into a file instead of returning it in the response.",
+      "visibility": "config.overrideSettings && config.events != \"fileDownloaded\"",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "File Name",
+      "name": "fileName",
+      "description": "If provided, the file will be stored with this name. If empty the file name will be calculated from the URL.",
+      "visibility": "(config.overrideSettings && config.download) || config.events === \"fileDownloaded\"",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "Full Response",
+      "name": "fullResponse",
+      "type": "boolean",
+      "description": "Include extended information about response",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Connection timeout",
+      "name": "connectionTimeout",
+      "description": "Connect timeout interval, in milliseconds (0 = infinity). Default value: 5000 ms (5 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "5000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.connectionTimeout || utils.isPlaceholder(config.connectionTimeout) || utils.getInteger(config.connectionTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Read timeout",
+      "name": "readTimeout",
+      "description": "Read timeout interval, in milliseconds (0 = infinity). Default value: 60000 ms (60 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "60000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.readTimeout || utils.isPlaceholder(config.readTimeout) || utils.getInteger(config.readTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

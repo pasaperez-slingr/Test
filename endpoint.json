@@ -5,25 +5,108 @@
     "internal": false,
     "configurationType": "GLOBAL",
     "deployment": {
-        "profiles":[
+        "profiles": [
             {
                 "name": "default",
                 "label": "Default",
                 "memory": 384,
                 "offHeapMinFactor": 1.5,
-                "description": "388 of memory and 1.5 off heap min factor. Default configuration"
+                "description": "Default configuration"
+            },
+            {
+                "name": "bigfiles",
+                "label": "Big Files",
+                "memory": 1024,
+                "description": "Use this configuration if you want to receive big files as response to emails"
             }
         ],
         "allowMultipleInstances": false
     },
     "status": "ACTIVE",
-    "stores": [ ],
-    "events": [ ],
-    "functions": [ ],
-    "scripts":[ ],
-    "flowSteps": [
-        "roto23"
+    "stores": [
+        {
+            "name": "requests-store"
+        }
     ],
-    "listeners":[ ],
-    "configuration":[ ]
+    "events": [
+        {
+            "label": "Webhook",
+            "name": "webhook",
+            "description": "Happens when a HTTP request hits the endpoint URL. Must be a POST with content type application/json."
+        },
+        {
+            "label": "Webhook Sync",
+            "name": "webhookSync",
+            "description": "Happens when a HTTP request hits the endpoint URL and needs a response from the listener. Must be a POST with content type application/json."
+        },
+        {
+            "label": "File Downloaded",
+            "name": "fileDownloaded",
+            "description": "Happens when a async download file process is finished (thrown by a GET function with 'forceDownload' enabled and 'downloadSync' disabled)"
+        }
+    ],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "_get",
+            "description": "Sends a GET request",
+            "callbacks": [
+                {
+                    "name": "fileDownloaded"
+                }
+            ]
+        },
+        {
+            "label": "POST",
+            "name": "_post",
+            "description": "Sends a POST request"
+        },
+        {
+            "label": "PUT",
+            "name": "_put",
+            "description": "Sends a PUT request"
+        },
+        {
+            "label": "PATCH",
+            "name": "_patch",
+            "description": "Sends a PATCH request"
+        },
+        {
+            "label": "DELETE",
+            "name": "_delete",
+            "description": "Sends a DELETE request"
+        },
+        {
+            "label": "HEAD",
+            "name": "_head",
+            "description": "Sends a HEAD request"
+        },
+        {
+            "label": "OPTIONS",
+            "name": "_options",
+            "description": "Sends a OPTIONS request"
+        }
+    ],
+    "scripts": [
+        "functions.js"
+    ],
+    "flowSteps": [
+        "apiCallSendgrid",
+        "sendEmailSengrid"
+    ],
+    "configuration": [
+        {
+            "name": "apiKey",
+            "label": "API key",
+            "description": "API key",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "webhook",
+            "label": "Webhook URL",
+            "type": "label",
+            "value": "@config.WEBHOOK_URL"
+        }
+    ]
 }
