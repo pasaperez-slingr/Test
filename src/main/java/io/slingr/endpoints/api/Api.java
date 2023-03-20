@@ -14,7 +14,7 @@ import org.apache.http.entity.ContentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SlingrEndpoint(name = "api")
+@SlingrEndpoint(name = "api", functionPrefix = "_")
 public class Api extends HttpEndpoint {
     private Logger logger = LoggerFactory.getLogger(Api.class);
 
