@@ -5,56 +5,27 @@
     "internal": false,
     "configurationType": "GLOBAL",
     "deployment": {
-        "profiles": [
+        "profiles":[
             {
                 "name": "default",
                 "label": "Default",
-                "memory": 384,
+                "memory": 256,
                 "offHeapMinFactor": 1.5,
                 "description": "Default configuration"
-            },
-            {
-                "name": "bigfiles",
-                "label": "Big Files",
-                "memory": 1024,
-                "description": "Use this configuration if you want to receive big files as response to emails"
             }
         ],
         "allowMultipleInstances": false
     },
     "status": "ACTIVE",
     "stores": [
-        {
-            "name": "requests-store"
-        }
+        { "name": "googleAccessToken" }
     ],
-    "events": [
-        {
-            "label": "Webhook",
-            "name": "webhook",
-            "description": "Happens when a HTTP request hits the endpoint URL. Must be a POST with content type application/json."
-        },
-        {
-            "label": "Webhook Sync",
-            "name": "webhookSync",
-            "description": "Happens when a HTTP request hits the endpoint URL and needs a response from the listener. Must be a POST with content type application/json."
-        },
-        {
-            "label": "File Downloaded",
-            "name": "fileDownloaded",
-            "description": "Happens when a async download file process is finished (thrown by a GET function with 'forceDownload' enabled and 'downloadSync' disabled)"
-        }
-    ],
+    "events": [],
     "functions": [
         {
             "label": "GET",
             "name": "_get",
-            "description": "Sends a GET request",
-            "callbacks": [
-                {
-                    "name": "fileDownloaded"
-                }
-            ]
+            "description": "Sends a GET request"
         },
         {
             "label": "POST",
@@ -67,46 +38,159 @@
             "description": "Sends a PUT request"
         },
         {
-            "label": "PATCH",
-            "name": "_patch",
-            "description": "Sends a PATCH request"
-        },
-        {
             "label": "DELETE",
             "name": "_delete",
             "description": "Sends a DELETE request"
-        },
-        {
-            "label": "HEAD",
-            "name": "_head",
-            "description": "Sends a HEAD request"
-        },
-        {
-            "label": "OPTIONS",
-            "name": "_options",
-            "description": "Sends a OPTIONS request"
         }
     ],
-    "scripts": [
+    "scripts":[
         "functions.js"
     ],
     "flowSteps": [
-        "apiCallSendgrid",
-        "sendEmailSendgrid"
+        "apiCallGoogleWorkspace"
     ],
-    "configuration": [
+    "configuration":[
         {
-            "name": "apiKey",
-            "label": "API key",
-            "description": "API key",
+            "name": "serviceAccountEmail",
+            "label": "Service Account Email",
+            "description": "The email from service account created",
             "type": "text",
             "required": true
         },
         {
-            "name": "webhook",
-            "label": "Webhook URL",
-            "type": "label",
-            "value": "@config.WEBHOOK_URL"
+            "name": "privateKey",
+            "label": "Private Key",
+            "description": "The private key associated to the service account",
+            "type": "password",
+            "required": true
+        },
+        {
+            "name": "adminEmail",
+            "label": "Admin Account Email",
+            "description": "The admin email who will be impersonated",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "Auth Scopes",
+            "name": "authScopes",
+            "description": "The auth scopes the service accounts have, if you select scopes that don't belong to your service account it will lead to authorization errors",
+            "type": "dropDown",
+            "multiplicity": "many",
+            "defaultValue": ["user"],
+            "typeOptions": {
+                "allowCustom": true,
+                "possibleValues":[
+                    {
+                        "label": "Directory > User aliases readonly scope",
+                        "name": "directory.user.alias.readonly"
+                    },
+                    {
+                        "label": "Directory > User aliases scope",
+                        "name": "directory.user.alias"
+                    },
+                    {
+                        "label": "Directory > Users readonly scope",
+                        "name": "directory.user.readonly"
+                    },
+                    {
+                        "label": "Directory > Users scope",
+                        "name": "directory.user"
+                    },
+                    {
+                        "label": "Directory > Organizational units redaonly scope",
+                        "name": "directory.orgunit.readonly"
+                    },
+                    {
+                        "label": "Directory > Organizational units scope",
+                        "name": "directory.orgunit"
+                    },
+                    {
+                        "label": "Directory > Groups readonly scope",
+                        "name": "directory.group.readonly"
+                    },
+                    {
+                        "label": "Directory > Groups scope",
+                        "name": "directory.group"
+                    },
+                    {
+                        "label": "Directory > Group members readonly scope",
+                        "name": "directory.group.member.readonly"
+                    },
+                    {
+                        "label": "Directory > Group members scope",
+                        "name": "directory.group.member"
+                    },
+                    {
+                        "label": "Directory > Users security scope",
+                        "name": "directory.user.security"
+                    },
+                    {
+                        "label": "Directory > Role management scope",
+                        "name": "directory.rolemanagement"
+                    },
+                    {
+                        "label": "Directory > Resource Calendar readonly scope",
+                        "name": "directory.resource.calendar.readonly"
+                    },
+                    {
+                        "label": "Directory > Resource Calendar scope",
+                        "name": "directory.resource.calendar"
+                    },
+                    {
+                        "label": "Directory > Domains readonly scope",
+                        "name": "directory.domain.readonly"
+                    },
+                    {
+                        "label": "Directory > Domains scope",
+                        "name": "directory.domain"
+                    },
+                    {
+                        "label": "Directory > Customers readonly scope",
+                        "name": "directory.customer.readonly"
+                    },
+                    {
+                        "label": "Directory > Customers scope",
+                        "name": "directory.customer"
+                    },
+                    {
+                        "label": "Directory > Userschema readonly scope",
+                        "name": "directory.userschema.readonly"
+                    },
+                    {
+                        "label": "Directory > Userschema scope",
+                        "name": "directory.userschema"
+                    },
+                    {
+                        "label": "Directory > Role management readonly scope",
+                        "name": "directory.rolemanagement.readonly"
+                    },
+                    {
+                        "label": "Data Transfer > Data transfer scope",
+                        "name": "datatransfer"
+                    },
+                    {
+                        "label": "Data Transfer > Data transfer readonly scope",
+                        "name": "datatransfer.readonly"
+                    }
+
+                ]
+            }
+        },
+        {
+            "name": "oauth",
+            "label": "Connect with Google",
+            "type": "oauth2",
+            "typeOptions": {
+                "clientId": "",
+                "clientSecret": "",
+                "authUrl": "",
+                "accessTokenUrl": "",
+                "scope": "",
+                "grantType":"",
+                "accessToken": "",
+                "refreshToken": ""
+            }
         }
     ]
 }

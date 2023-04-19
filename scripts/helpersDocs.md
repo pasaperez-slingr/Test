@@ -1,22 +1,20 @@
 # Javascript API
 
-The Javascript API of the sendgrid endpoint has three pieces:
+The Javascript API of the googleworkspace endpoint has three pieces:
 
 - **HTTP requests**: These allow to make regular HTTP requests.
 - **Shortcuts**: These are helpers to make HTTP request to the API in a more convenient way.
 - **Additional Helpers**: These helpers provide additional features that facilitate or improves the endpoint usage in SLINGR.
 
 ## HTTP requests
-You can make `GET`,`POST`,`PATCH`,`PUT`,`DELETE` requests to the [sendgrid API](API_URL_HERE) like this:
+You can make `POST`,`PUT`,`GET`,`DELETE` requests to the [googleworkspace API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.sendgrid.get('/ips/pools')
-var response = app.endpoints.sendgrid.post('/validations/email', body)
-var response = app.endpoints.sendgrid.post('/validations/email')
-var response = app.endpoints.sendgrid.patch('/tracking_settings/google_analytics', body)
-var response = app.endpoints.sendgrid.patch('/tracking_settings/google_analytics')
-var response = app.endpoints.sendgrid.put('/marketing/contacts/imports', body)
-var response = app.endpoints.sendgrid.put('/marketing/contacts/imports')
-var response = app.endpoints.sendgrid.delete('/suppression/bounces')
+var response = app.endpoints.googleworkspace.post('/directory/v1/users', body)
+var response = app.endpoints.googleworkspace.post('/directory/v1/users')
+var response = app.endpoints.googleworkspace.put('/directory/v1/customer/:customerKey/schemas/:schemaKey', body)
+var response = app.endpoints.googleworkspace.put('/directory/v1/customer/:customerKey/schemas/:schemaKey')
+var response = app.endpoints.googleworkspace.get('/directory/v1/users/:userKey/aliases')
+var response = app.endpoints.googleworkspace.delete('/directory/v1/users/:userKey')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)
@@ -30,598 +28,375 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 
 <br>
 
-* API URL: '/asm/suppressions'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.asm.suppressions.get()
-```
----
-* API URL: '/asm/groups'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.asm.groups.get()
-```
----
-* API URL: '/user/webhooks/parse/settings'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.webhooks.parse.settings.get()
-```
----
-* API URL: '/user/webhooks/parse/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.webhooks.parse.stats.get()
-```
----
-* API URL: '/user/webhooks/event/settings'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.webhooks.event.settings.get()
-```
----
-* API URL: '/user/profile'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.profile.get()
-```
----
-* API URL: '/user/email'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.email.get()
-```
----
-* API URL: '/user/username'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.username.get()
-```
----
-* API URL: '/user/credits'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.credits.get()
-```
----
-* API URL: '/user/account'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.user.account.get()
-```
----
-* API URL: '/whitelabel/domains'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.whitelabel.domains.get()
-```
----
-* API URL: '/whitelabel/domains/subuser'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.whitelabel.domains.subuser.get()
-```
----
-* API URL: '/whitelabel/domains/default'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.whitelabel.domains.default.get()
-```
----
-* API URL: '/whitelabel/links'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.whitelabel.links.get()
-```
----
-* API URL: '/whitelabel/links/default'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.whitelabel.links.default.get()
-```
----
-* API URL: '/contactdb/recipients/count'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.recipients.count.get()
-```
----
-* API URL: '/contactdb/recipients/billable_count'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.recipients.billableCount.get()
-```
----
-* API URL: '/contactdb/lists'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.lists.get()
-```
----
-* API URL: '/contactdb/segments'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.segments.get()
-```
----
-* API URL: '/contactdb/reserved_fields'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.reservedFields.get()
-```
----
-* API URL: '/contactdb/status'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.contactdb.status.get()
-```
----
-* API URL: '/ips/pools'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.ips.pools.get()
-```
----
-* API URL: '/ips/remaining'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.ips.remaining.get()
-```
----
-* API URL: '/ips/assigned'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.ips.assigned.get()
-```
----
-* API URL: '/suppression/blocks'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.suppression.blocks.get()
-```
----
-* API URL: '/suppression/spam_reports'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.suppression.spamReports.get()
-```
----
-* API URL: '/suppression/unsubscribes'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.suppression.unsubscribes.get()
-```
----
-* API URL: '/scopes'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.scopes.get()
-```
----
-* API URL: '/scopes/requests'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.scopes.requests.get()
-```
----
-* API URL: '/marketing/contacts'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.marketing.contacts.get()
-```
----
-* API URL: '/marketing/contacts/count'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.marketing.contacts.count.get()
-```
----
-* API URL: '/marketing/lists'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.marketing.lists.get()
-```
----
-* API URL: '/marketing/senders'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.marketing.senders.get()
-```
----
-* API URL: '/marketing/field_definitions'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.marketing.fieldDefinitions.get()
-```
----
-* API URL: '/mail_settings'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.get()
-```
----
-* API URL: '/mail_settings/plain_content'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.plainContent.get()
-```
----
-* API URL: '/mail_settings/template'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.template.get()
-```
----
-* API URL: '/mail_settings/forward_spam'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.forwardSpam.get()
-```
----
-* API URL: '/mail_settings/address_whitelist'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.addressWhitelist.get()
-```
----
-* API URL: '/mail_settings/bcc'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailSettings.bcc.get()
-```
----
-* API URL: '/teammates'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.teammates.get()
-```
----
-* API URL: '/teammates/pending'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.teammates.pending.get()
-```
----
-* API URL: '/tracking_settings'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.trackingSettings.get()
-```
----
-* API URL: '/tracking_settings/click'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.trackingSettings.click.get()
-```
----
-* API URL: '/tracking_settings/subscription'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.trackingSettings.subscription.get()
-```
----
-* API URL: '/categories/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.categories.stats.get()
-```
----
-* API URL: '/categories/stats/sums'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.categories.stats.sums.get()
-```
----
-* API URL: '/categories'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.categories.get()
-```
----
-* API URL: '/access_settings/activity'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.accessSettings.activity.get()
-```
----
-* API URL: '/subusers/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.subusers.stats.get()
-```
----
-* API URL: '/subusers/stats/monthly'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.subusers.stats.monthly.get()
-```
----
-* API URL: '/subusers/stats/sums'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.subusers.stats.sums.get()
-```
----
-* API URL: '/subusers/reputations'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.subusers.reputations.get()
-```
----
-* API URL: '/messages'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.messages.get()
-```
----
-* API URL: '/partner_settings'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.partnerSettings.get()
-```
----
-* API URL: '/browsers/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.browsers.stats.get()
-```
----
-* API URL: '/devices/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.devices.stats.get()
-```
----
-* API URL: '/templates'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.templates.get()
-```
----
-* API URL: '/clients/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.clients.stats.get()
-```
----
-* API URL: '/geo/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.geo.stats.get()
-```
----
-* API URL: '/mailbox_providers/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.mailboxProviders.stats.get()
-```
----
-* API URL: '/stats'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.sendgrid.stats.get()
-```
----
-* API URL: '/asm/suppressions/global'
+* API URL: '/directory/v1/groups'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.asm.suppressions.global.post(body)
+app.endpoints.googleworkspace.directory.groups.post(body)
 ```
 ---
-* API URL: '/user/webhooks/event/test'
+* API URL: '/directory/v1/groups/:groupKey/aliases'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.user.webhooks.event.test.post(body)
+app.endpoints.googleworkspace.directory.groups.aliases.post(groupKey, body)
 ```
 ---
-* API URL: '/user/scheduled_sends'
+* API URL: '/directory/v1/groups/:groupKey/members'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.user.scheduledSends.post(body)
+app.endpoints.googleworkspace.directory.groups.members.post(groupKey, body)
 ```
 ---
-* API URL: '/whitelabel/ips'
+* API URL: '/directory/v1/customer/:customerKey/orgunits'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.whitelabel.ips.post(body)
+app.endpoints.googleworkspace.directory.customer.orgunits.post(customerKey, body)
 ```
 ---
-* API URL: '/contactdb/recipients/search'
+* API URL: '/directory/v1/customer/:customerKey/roles'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.contactdb.recipients.search.post(body)
+app.endpoints.googleworkspace.directory.customer.roles.post(customerKey, body)
 ```
 ---
-* API URL: '/contactdb/custom_fields'
+* API URL: '/directory/v1/customer/:customerKey/roleassignments'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.contactdb.customFields.post(body)
+app.endpoints.googleworkspace.directory.customer.roleassignments.post(customerKey, body)
 ```
 ---
-* API URL: '/ips'
+* API URL: '/directory/v1/users'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.ips.post(body)
+app.endpoints.googleworkspace.directory.users.post(body)
 ```
 ---
-* API URL: '/ips/warmup'
+* API URL: '/directory/v1/users/:userKey/makeAdmin'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.ips.warmup.post(body)
+app.endpoints.googleworkspace.directory.users.makeAdmin.post(userKey, body)
 ```
 ---
-* API URL: '/marketing/contacts/exports'
+* API URL: '/directory/v1/users/:userKey/undelete'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.marketing.contacts.exports.post(body)
+app.endpoints.googleworkspace.directory.users.undelete.post(userKey, body)
 ```
 ---
-* API URL: '/marketing/contacts/search'
+* API URL: '/directory/v1/users/:userKey/aliases'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.marketing.contacts.search.post(body)
+app.endpoints.googleworkspace.directory.users.aliases.post(userKey, body)
 ```
 ---
-* API URL: '/marketing/segments'
+* API URL: '/directory/v1/customer/:customerKey/schemas'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.marketing.segments.post(body)
+app.endpoints.googleworkspace.directory.customer.schemas.post(customerKey, body)
 ```
 ---
-* API URL: '/marketing/singlesends'
+* API URL: '/directory/v1/customer/:customerKey/devices/mobile/:resourceId/action'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.marketing.singlesends.post(body)
+app.endpoints.googleworkspace.directory.customer.devices.mobile.action.post(customerKey, resourceId, body)
 ```
 ---
-* API URL: '/subusers'
+* API URL: '/datatransfer/v1/transfers'
 * HTTP Method: 'POST'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.subusers.post(body)
+app.endpoints.googleworkspace.datatransfer.transfers.post(body)
 ```
 ---
-* API URL: '/messages/download'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.messages.download.post(body)
-```
----
-* API URL: '/mail/batch'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.mail.batch.post(body)
-```
----
-* API URL: '/mail/send'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.mail.send.post(body)
-```
----
-* API URL: '/campaigns'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.campaigns.post(body)
-```
----
-* API URL: '/alerts'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.alerts.post(body)
-```
----
-* API URL: '/api_keys'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.apiKeys.post(body)
-```
----
-* API URL: '/senders'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.senders.post(body)
-```
----
-* API URL: '/v3/whitelabel/dns/email'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.v3.whitelabel.dns.email.post(body)
-```
----
-* API URL: '/validations/email'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.sendgrid.validations.email.post(body)
-```
----
-* API URL: '/user/settings/enforced_tls'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.user.settings.enforcedTls.patch(body)
-```
----
-* API URL: '/contactdb/recipients'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.contactdb.recipients.patch(body)
-```
----
-* API URL: '/mail_settings/forward_bounce'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.mailSettings.forwardBounce.patch(body)
-```
----
-* API URL: '/mail_settings/footer'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.mailSettings.footer.patch(body)
-```
----
-* API URL: '/mail_settings/spam_check'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.mailSettings.spamCheck.patch(body)
-```
----
-* API URL: '/mail_settings/bounce_purge'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.mailSettings.bouncePurge.patch(body)
-```
----
-* API URL: '/tracking_settings/google_analytics'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.trackingSettings.googleAnalytics.patch(body)
-```
----
-* API URL: '/tracking_settings/open'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.trackingSettings.open.patch(body)
-```
----
-* API URL: '/partner_settings/new_relic'
-* HTTP Method: 'PATCH'
-```javascript
-app.endpoints.sendgrid.partnerSettings.newRelic.patch(body)
-```
----
-* API URL: '/user/password'
+* API URL: '/directory/v1/groups/:groupKey'
 * HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.user.password.put(body)
+app.endpoints.googleworkspace.directory.groups.put(groupKey, body)
 ```
 ---
-* API URL: '/marketing/contacts/imports'
+* API URL: '/directory/v1/groups/:groupKey/members/:memberKey'
 * HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.marketing.contacts.imports.put(body)
+app.endpoints.googleworkspace.directory.groups.members.put(groupKey, memberKey, body)
 ```
 ---
-* API URL: '/whitelabel/links/subuser'
-* HTTP Method: 'DELETE'
+* API URL: '/directory/v1/customer/:customerKey/orgunits/:orgUnitPath'
+* HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.whitelabel.links.subuser.delete()
+app.endpoints.googleworkspace.directory.customer.orgunits.put(customerKey, orgUnitPath, body)
 ```
 ---
-* API URL: '/suppression/bounces'
-* HTTP Method: 'DELETE'
+* API URL: '/directory/v1/customers/:customerKey'
+* HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.suppression.bounces.delete()
+app.endpoints.googleworkspace.directory.customers.put(customerKey, body)
 ```
 ---
-* API URL: '/suppression/invalid_emails'
-* HTTP Method: 'DELETE'
+* API URL: '/directory/v1/users/:userKey'
+* HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.suppression.invalidEmails.delete()
+app.endpoints.googleworkspace.directory.users.put(userKey, body)
 ```
 ---
-* API URL: '/access_settings/whitelist'
-* HTTP Method: 'DELETE'
+* API URL: '/directory/v1/users/:userKey/photos/thumbnail'
+* HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
 ```javascript
-app.endpoints.sendgrid.accessSettings.whitelist.delete()
+app.endpoints.googleworkspace.directory.users.photos.thumbnail.put(userKey, body)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/schemas/:schemaKey'
+* HTTP Method: 'PUT'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.schemas.put(customerKey, schemaKey, body)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.get(groupKey)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey/aliases'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.aliases.get(groupKey)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey/members/:memberKey'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.members.get(groupKey, memberKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/orgunits/:orgUnitPath'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.orgunits.get(customerKey, orgUnitPath)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/roles/ALL/privileges'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.roles.ALL.privileges.get(customerKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/roles'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.roles.get(customerKey)
+```
+---
+* API URL: '/directory/v1/customers/:customerKey'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customers.get(customerKey)
+```
+---
+* API URL: '/directory/v1/users/:userKey'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.get(userKey)
+```
+---
+* API URL: '/directory/v1/users/:userKey/photos/thumbnail'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.photos.thumbnail.get(userKey)
+```
+---
+* API URL: '/directory/v1/users/:userKey/aliases'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.aliases.get(userKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/schemas/:schemaKey'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.schemas.get(customerKey, schemaKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/devices/mobile'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.devices.mobile.get(customerKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/devices/mobile/:resourceId'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.devices.mobile.get(customerKey, resourceId)
+```
+---
+* API URL: '/datatransfer/v1/applications'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.applications.get()
+```
+---
+* API URL: '/datatransfer/v1/applications/:applicationId'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.applications.get(applicationId)
+```
+---
+* API URL: '/datatransfer/v1/applications/:applicationId'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.applications.get()
+```
+---
+* API URL: '/datatransfer/v1/transfers'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.transfers.get()
+```
+---
+* API URL: '/datatransfer/v1/transfers/:dataTransferId'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.transfers.get(dataTransferId)
+```
+---
+* API URL: '/datatransfer/v1/transfers/:dataTransferId'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.datatransfer.transfers.get()
+```
+---
+* API URL: '/directory/v1/groups/:domain/:customer/:pageToken'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.getAll.get(domain, customer, pageToken)
+```
+---
+* API URL: '/directory/v1/groups/:userKey/:nextPageToken'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.getAllByUser.get(userKey, nextPageToken)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey/members/:pageToken'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.members.paged.get(groupKey, pageToken)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/orgunits/:orgUnitPath'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.orgunits.getAll.get(customerKey, orgUnitPath)
+```
+---
+* API URL: '/directory/v1/users/:domain/:pageToken'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.getAllByDomain.get(domain, pageToken)
+```
+---
+* API URL: '/directory/v1/users/:costumer/:pageToken'
+* HTTP Method: 'GET'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.getAllByCostumer.get(costumer, pageToken)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey/aliases/:aliasId'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.aliases.delete(groupKey, aliasId)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.delete(groupKey)
+```
+---
+* API URL: '/directory/v1/groups/:groupKey/members/:memberKey'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.groups.members.delete(groupKey, memberKey)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/orgunits/:orgUnitPath'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.orgunits.delete(customerKey, orgUnitPath)
+```
+---
+* API URL: '/directory/v1/users/:userKey/photos/thumbnail'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.photos.thumbnail.delete(userKey)
+```
+---
+* API URL: '/directory/v1/users/:userKey'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.delete(userKey)
+```
+---
+* API URL: '/directory/v1/users/:userKey/aliases/:aliasId'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.users.aliases.delete(userKey, aliasId)
+```
+---
+* API URL: '/directory/v1/customer/:customerKey/devices/mobile/:resourceId'
+* HTTP Method: 'DELETE'
+* More info: https://developers.google.com/admin-sdk/directory/reference/rest
+```javascript
+app.endpoints.googleworkspace.directory.customer.devices.mobile.delete(customerKey, resourceId)
 ```
 ---
 
@@ -664,7 +439,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>
             This is the http method to be used against the endpoint. <br>
             Possible values are: <br>
-            <i><strong>GET,POST,PATCH,PUT,DELETE</strong></i>
+            <i><strong>POST,PUT,GET,DELETE</strong></i>
         </td>
     </tr>
     <tr>
@@ -676,7 +451,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>
             The url to which this endpoint will send the request. This is the exact service to which the http request will be made. <br>
             Possible values are: <br>
-            <i><strong>/asm/suppressions<br>/asm/groups<br>/user/webhooks/parse/settings<br>/user/webhooks/parse/stats<br>/user/webhooks/event/settings<br>/user/profile<br>/user/email<br>/user/username<br>/user/credits<br>/user/account<br>/whitelabel/domains<br>/whitelabel/domains/subuser<br>/whitelabel/domains/default<br>/whitelabel/links<br>/whitelabel/links/default<br>/contactdb/recipients/count<br>/contactdb/recipients/billable_count<br>/contactdb/lists<br>/contactdb/segments<br>/contactdb/reserved_fields<br>/contactdb/status<br>/ips/pools<br>/ips/remaining<br>/ips/assigned<br>/suppression/blocks<br>/suppression/spam_reports<br>/suppression/unsubscribes<br>/scopes<br>/scopes/requests<br>/marketing/contacts<br>/marketing/contacts/count<br>/marketing/lists<br>/marketing/senders<br>/marketing/field_definitions<br>/mail_settings<br>/mail_settings/plain_content<br>/mail_settings/template<br>/mail_settings/forward_spam<br>/mail_settings/address_whitelist<br>/mail_settings/bcc<br>/teammates<br>/teammates/pending<br>/tracking_settings<br>/tracking_settings/click<br>/tracking_settings/subscription<br>/categories/stats<br>/categories/stats/sums<br>/categories<br>/access_settings/activity<br>/subusers/stats<br>/subusers/stats/monthly<br>/subusers/stats/sums<br>/subusers/reputations<br>/messages<br>/partner_settings<br>/browsers/stats<br>/devices/stats<br>/templates<br>/clients/stats<br>/geo/stats<br>/mailbox_providers/stats<br>/stats<br>/asm/suppressions/global<br>/user/webhooks/event/test<br>/user/scheduled_sends<br>/whitelabel/ips<br>/contactdb/recipients/search<br>/contactdb/custom_fields<br>/ips<br>/ips/warmup<br>/marketing/contacts/exports<br>/marketing/contacts/search<br>/marketing/segments<br>/marketing/singlesends<br>/subusers<br>/messages/download<br>/mail/batch<br>/mail/send<br>/campaigns<br>/alerts<br>/api_keys<br>/senders<br>/v3/whitelabel/dns/email<br>/validations/email<br>/user/settings/enforced_tls<br>/contactdb/recipients<br>/mail_settings/forward_bounce<br>/mail_settings/footer<br>/mail_settings/spam_check<br>/mail_settings/bounce_purge<br>/tracking_settings/google_analytics<br>/tracking_settings/open<br>/partner_settings/new_relic<br>/user/password<br>/marketing/contacts/imports<br>/whitelabel/links/subuser<br>/suppression/bounces<br>/suppression/invalid_emails<br>/access_settings/whitelist<br></strong></i>
+            <i><strong>/directory/v1/groups<br>/directory/v1/groups/{groupKey}/aliases<br>/directory/v1/groups/{groupKey}/members<br>/directory/v1/customer/{customerKey}/orgunits<br>/directory/v1/customer/{customerKey}/roles<br>/directory/v1/customer/{customerKey}/roleassignments<br>/directory/v1/users<br>/directory/v1/users/{userKey}/makeAdmin<br>/directory/v1/users/{userKey}/undelete<br>/directory/v1/users/{userKey}/aliases<br>/directory/v1/customer/{customerKey}/schemas<br>/directory/v1/customer/{customerKey}/devices/mobile/{resourceId}/action<br>/datatransfer/v1/transfers<br>/directory/v1/groups/{groupKey}<br>/directory/v1/groups/{groupKey}/members/{memberKey}<br>/directory/v1/customer/{customerKey}/orgunits/{orgUnitPath}<br>/directory/v1/customers/{customerKey}<br>/directory/v1/users/{userKey}<br>/directory/v1/users/{userKey}/photos/thumbnail<br>/directory/v1/customer/{customerKey}/schemas/{schemaKey}<br>/directory/v1/groups/{groupKey}<br>/directory/v1/groups/{groupKey}/aliases<br>/directory/v1/groups/{groupKey}/members/{memberKey}<br>/directory/v1/customer/{customerKey}/orgunits/{orgUnitPath}<br>/directory/v1/customer/{customerKey}/roles/ALL/privileges<br>/directory/v1/customer/{customerKey}/roles<br>/directory/v1/customers/{customerKey}<br>/directory/v1/users/{userKey}<br>/directory/v1/users/{userKey}/photos/thumbnail<br>/directory/v1/users/{userKey}/aliases<br>/directory/v1/customer/{customerKey}/schemas/{schemaKey}<br>/directory/v1/customer/{customerKey}/devices/mobile<br>/directory/v1/customer/{customerKey}/devices/mobile/{resourceId}<br>/datatransfer/v1/applications<br>/datatransfer/v1/applications/{applicationId}<br>/datatransfer/v1/applications/{applicationId}<br>/datatransfer/v1/transfers<br>/datatransfer/v1/transfers/{dataTransferId}<br>/datatransfer/v1/transfers/{dataTransferId}<br>/directory/v1/groups/{domain}/{customer}/{pageToken}<br>/directory/v1/groups/{userKey}/{nextPageToken}<br>/directory/v1/groups/{groupKey}/members/{pageToken}<br>/directory/v1/customer/{customerKey}/orgunits/{orgUnitPath}<br>/directory/v1/users/{domain}/{pageToken}<br>/directory/v1/users/{costumer}/{pageToken}<br>/directory/v1/groups/{groupKey}/aliases/{aliasId}<br>/directory/v1/groups/{groupKey}<br>/directory/v1/groups/{groupKey}/members/{memberKey}<br>/directory/v1/customer/{customerKey}/orgunits/{orgUnitPath}<br>/directory/v1/users/{userKey}/photos/thumbnail<br>/directory/v1/users/{userKey}<br>/directory/v1/users/{userKey}/aliases/{aliasId}<br>/directory/v1/customer/{customerKey}/devices/mobile/{resourceId}<br></strong></i>
         </td>
     </tr>
     <tr>

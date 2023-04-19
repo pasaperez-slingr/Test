@@ -1,600 +1,626 @@
 {
   "fileName": "functions",
+  "endpointName": "googleworkspace",
   "apiDescriptors": [
     {
-      "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/asm/suppressions"
-    },
-    {
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/asm/suppressions/global"
+      "url": "/directory/v1/groups",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/asm/groups"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/webhooks/parse/settings"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/webhooks/parse/stats"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/webhooks/event/test"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/webhooks/event/settings"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/settings/enforced_tls"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/scheduled_sends"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/profile"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/email"
-    },
-    {
       "method": "PUT",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/password"
+      "url": "/directory/v1/groups/:groupKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "POST",
+      "url": "/directory/v1/groups/:groupKey/aliases",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/username"
+      "url": "/directory/v1/groups/:groupKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/user/credits"
+      "url": "/directory/v1/groups/:groupKey/aliases",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/user/account"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/domains"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/domains/subuser"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/domains/default"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/links"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/links/default"
-    },
-    {
       "method": "DELETE",
-      "prefix": "",
-      "suffix": "",
-      "url": "/whitelabel/links/subuser"
+      "url": "/directory/v1/groups/:groupKey/aliases/:aliasId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/whitelabel/ips"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/recipients"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/recipients/count"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/recipients/search"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/recipients/billable_count"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/lists"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/custom_fields"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/segments"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/reserved_fields"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/contactdb/status"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/ips"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/ips/pools"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/ips/warmup"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/ips/remaining"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/ips/assigned"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/suppression/blocks"
-    },
-    {
       "method": "DELETE",
-      "prefix": "",
-      "suffix": "",
-      "url": "/suppression/bounces"
+      "url": "/directory/v1/groups/:groupKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "DELETE",
       "prefix": "",
       "suffix": "",
-      "url": "/suppression/invalid_emails"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/suppression/spam_reports"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/suppression/unsubscribes"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/scopes"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/scopes/requests"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/contacts"
-    },
-    {
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/contacts/exports"
+      "url": "/directory/v1/groups/:groupKey/members",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
       "method": "PUT",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/contacts/imports"
+      "url": "/directory/v1/groups/:groupKey/members/:memberKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/contacts/count"
+      "url": "/directory/v1/groups/:groupKey/members/:memberKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/marketing/contacts/search"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/segments"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/singlesends"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/lists"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/senders"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/marketing/field_definitions"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/plain_content"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/template"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/forward_spam"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/forward_bounce"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/footer"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/address_whitelist"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/spam_check"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/bounce_purge"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail_settings/bcc"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/teammates"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/teammates/pending"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/tracking_settings"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/tracking_settings/click"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/tracking_settings/subscription"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/tracking_settings/google_analytics"
-    },
-    {
-      "method": "PATCH",
-      "prefix": "",
-      "suffix": "",
-      "url": "/tracking_settings/open"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/categories/stats"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/categories/stats/sums"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/categories"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/access_settings/activity"
-    },
-    {
       "method": "DELETE",
-      "prefix": "",
-      "suffix": "",
-      "url": "/access_settings/whitelist"
+      "url": "/directory/v1/groups/:groupKey/members/:memberKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/subusers/stats"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/subusers/stats/monthly"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/subusers/stats/sums"
-    },
-    {
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/subusers"
+      "url": "/directory/v1/customer/:customerKey/orgunits",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "PUT",
+      "url": "/directory/v1/customer/:customerKey/orgunits/:orgUnitPath",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/subusers/reputations"
+      "url": "/directory/v1/customer/:customerKey/orgunits/:orgUnitPath",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "DELETE",
+      "url": "/directory/v1/customer/:customerKey/orgunits/:orgUnitPath",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/messages"
+      "url": "/directory/v1/customer/:customerKey/roles/ALL/privileges",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/directory/v1/customer/:customerKey/roles",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/messages/download"
+      "url": "/directory/v1/customer/:customerKey/roles",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail/batch"
+      "url": "/directory/v1/customer/:customerKey/roleassignments",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/directory/v1/customers/:customerKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "PUT",
+      "url": "/directory/v1/customers/:customerKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mail/send"
+      "url": "/directory/v1/users",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/partner_settings"
+      "method": "PUT",
+      "url": "/directory/v1/users/:userKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "PATCH",
       "prefix": "",
       "suffix": "",
-      "url": "/partner_settings/new_relic"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/browsers/stats"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/devices/stats"
-    },
-    {
-      "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/templates"
-    },
-    {
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/campaigns"
+      "url": "/directory/v1/users/:userKey/makeAdmin",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/alerts"
-    },
-    {
-      "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/api_keys"
-    },
-    {
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/clients/stats"
+      "url": "/directory/v1/users/:userKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/geo/stats"
+      "url": "/directory/v1/users/:userKey/photos/thumbnail",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "PUT",
+      "url": "/directory/v1/users/:userKey/photos/thumbnail",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "DELETE",
+      "url": "/directory/v1/users/:userKey/photos/thumbnail",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "DELETE",
+      "url": "/directory/v1/users/:userKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "POST",
+      "url": "/directory/v1/users/:userKey/undelete",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "POST",
+      "url": "/directory/v1/users/:userKey/aliases",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "GET",
-      "prefix": "",
-      "suffix": "",
-      "url": "/mailbox_providers/stats"
+      "url": "/directory/v1/users/:userKey/aliases",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
+      "prefix": "",
+      "suffix": "",
+      "method": "DELETE",
+      "url": "/directory/v1/users/:userKey/aliases/:aliasId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
       "method": "POST",
-      "prefix": "",
-      "suffix": "",
-      "url": "/senders"
+      "url": "/directory/v1/customer/:customerKey/schemas",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/v3/whitelabel/dns/email"
+      "method": "PUT",
+      "url": "/directory/v1/customer/:customerKey/schemas/:schemaKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
     },
     {
-      "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/validations/email"
-    },
-    {
       "method": "GET",
+      "url": "/directory/v1/customer/:customerKey/schemas/:schemaKey",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
       "prefix": "",
       "suffix": "",
-      "url": "/stats"
+      "method": "GET",
+      "url": "/directory/v1/customer/:customerKey/devices/mobile",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/directory/v1/customer/:customerKey/devices/mobile/:resourceId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "POST",
+      "url": "/directory/v1/customer/:customerKey/devices/mobile/:resourceId/action",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "DELETE",
+      "url": "/directory/v1/customer/:customerKey/devices/mobile/:resourceId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/datatransfer/v1/applications",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/datatransfer/v1/applications/:applicationId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/datatransfer/v1/transfers",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "GET",
+      "url": "/datatransfer/v1/transfers/:dataTransferId",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "method": "POST",
+      "url": "/datatransfer/v1/transfers",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "getAll",
+      "method": "GET",
+      "url": "/directory/v1/groups/:domain/:customer/:pageToken",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "getAllByUser",
+      "method": "GET",
+      "url": "/directory/v1/groups/:userKey/:nextPageToken",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "paged",
+      "method": "GET",
+      "url": "/directory/v1/groups/:groupKey/members/:pageToken",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "getAll",
+      "method": "GET",
+      "url": "/directory/v1/customer/:customerKey/orgunits/:orgUnitPath",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+        "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "getAllByDomain",
+      "method": "GET",
+      "url": "/directory/v1/users/:domain/:pageToken",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+        "injectedHelper": true
+    },
+    {
+      "prefix": "",
+      "suffix": "getAllByCostumer",
+      "method": "GET",
+      "url": "/directory/v1/users/:costumer/:pageToken",
+      "omittableUrlParts": [
+        "v1"
+      ],
+      "docsLinks": [
+        "https://developers.google.com/admin-sdk/directory/reference/rest"
+      ],
+      "injectedHelper": true
     }
-  ],
-  "endpointName": "sendgrid"
+  ]
 }
