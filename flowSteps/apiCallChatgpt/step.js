@@ -14,7 +14,7 @@
  * {number} connectionTimeout, Read timeout interval, in milliseconds.
  * {number} readTimeout, Connect timeout interval, in milliseconds.
  */
-step.apiCallGoogleWorkspace = function (inputs) {
+step.apiCallChatgpt = function (inputs) {
 
 	var inputsLogic = {
 		headers: inputs.headers || [],
@@ -97,6 +97,7 @@ var parse = function (url, pathVariables){
 
 	return url;
 }
+
 var isObject = function (obj) {
 	return !!obj && stringType(obj) === '[object Object]'
 };
